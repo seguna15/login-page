@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root{
+    --ultramarine-blue: #4571F5;
+    --beau-blue: #D3E5F6;
+    --bvcryola: #7567C2;
+    --sonic-silver: #71727A;
+    --lavender-one:  #E4EAF9;
+    --lavender-two: #D6DAE8;
+    --Onyx: #383A40;
+    --ghost-white: #F0F2F9;
+
+}
+
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    height: 100vh;
+    background-color: var(--bvcryola);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 90%;
+    height: 90vh;
+    background: radial-gradient(var(--bvcryola) 10%, var(--lavender-one) 90%);
+}
+
+/** Navigation */
+
+.navigation{
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    width: 70%;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+.navigation :is(.link-group, .button-group ){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    
+}
+
+.navigation .link-group{
+    width: 60%;
+}
+
+.navigation .button-group{
+    width: 40%;
+}
+
+.navigation :is(.link-group, .button-group) li {
+    display: inline-block;
+}
+
+.navigation :is(.link-group, .button-group) li a {
+    color: var(--Onyx);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation .link-group li a:hover{
+    color: var(--ultramarine-blue);
+}
+
+/* All links with class btn will use this style */
+.button-group .btn{
+    background-color: var(--ghost-white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all .5s ease-in;
+}
+
+.button-group li .btn:hover{
+    background-color: var(--ultramarine-blue);
+    color: var(--ghost-white);
+}
+/** End Navigation */
+
+/** Main Content*/
+section.main-content{
+    display: grid;
+    width: 80%;
+    margin-top: 50px;
+    margin-inline: auto;
+    height: 60vh;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.showcase{
+    position: relative;   
+}
+
+.main-content > .showcase > .text{
+    width: 70%; 
+    z-index: 2;
+}
+
+.showcase > .text > h1{
+    font-size: 36px;
+    font-style: oblique;
+    font-weight: 700;
+    color: var(--ultramarine-blue);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.showcase > .text > p {
+    width: 70%;
+    font-size: 14px;
+    color: var(--Onyx);
+}
+
+.showcase > img{
+    display: block;
+    top: 50px;
+    left: 150px;
+    position: absolute;
+    width: 350px;
+    height: auto;
+    z-index: 1;
+}
+
+.login-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#login{
+    width: 70%;
+}
+
+#login .input-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#login >.input-group > input{
+    border: none;
+    outline: none;
+    background-color: var(--beau-blue);
+    height: 30px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input-group > .bx-low-vision {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    color: var(--sonic-silver);
+}
+
+#login .options{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--ghost-white);
+}
+
+#login .singIn{
+    display: block;
+    width: 90%;
+    background-color: var(--ultramarine-blue);
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--ghost-white);
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.login-area small{
+    font-size: 12px;
+    color: var(--ghost-white);
+}
+
+.icon-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.icon-item{
+    background-color: var(--lavender-two);
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+/** End Main Content*/
